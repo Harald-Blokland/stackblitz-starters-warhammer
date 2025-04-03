@@ -22,8 +22,15 @@ convertButton.addEventListener('click', function () {
   }
 });
 
-const addTodo = document.querySelector('addTodo');
+const addTodo = document.querySelector('#addTodo');
 
-addTodo.addEventListener('click');
+addTodo.addEventListener('click',function (event){
+event.preventDefault()
+  const userInput = document.querySelector("#userInput").value;
+  const todoList=document.querySelector("#todoList");
+  const todoItem=document.createElement("li");
+  todoItem.textContent=userInput;
+  todoList.appendChild(todoItem)
+});
 
-FormData.document;
+
